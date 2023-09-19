@@ -1,4 +1,5 @@
 import './globals.css'
+import { ThemeProvider } from '@/components/ui/theme-provider'
 
 export const metadata = {
   title: 'Startup Bible',
@@ -13,9 +14,16 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <main className='min-h-screen bg-background flex flex-col items-center'>
-          {children}
-        </main>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <main className='min-h-screen bg-background flex flex-col items-center'>
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   )
