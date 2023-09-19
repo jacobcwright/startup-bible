@@ -4,6 +4,9 @@ import { ThemeProvider } from '@/components/ui/theme-provider'
 export const metadata = {
   title: 'Startup Bible',
   description: 'The holy texts for startups',
+  icons: {
+    icon: '/icon.ico',
+  },
 }
 
 export default function RootLayout({
